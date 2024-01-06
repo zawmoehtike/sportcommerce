@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="margin_padding_2">2dp</dimen>
+    <dimen name="margin_padding_4">4dp</dimen>
+    <dimen name="margin_padding_8">8dp</dimen>
+    <dimen name="margin_padding_12">12dp</dimen>
+    <dimen name="margin_padding_product_detail_edit_btn">11dp</dimen>
+    <dimen name="margin_padding_16">16dp</dimen>
+    <dimen name="margin_padding_20">20dp</dimen>
+    <dimen name="margin_padding_22">22dp</dimen>
+    <dimen name="margin_padding_24">24dp</dimen>
+    <dimen name="margin_padding_32">32dp</dimen>
+    <dimen name="margin_padding_64">64dp</dimen>
+</resources>

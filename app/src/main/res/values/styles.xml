@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="KanitBold.3X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_bold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="KanitSemiBold.3X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_semibold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="KanitMedium.3X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_medium</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="KanitRegular.3X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="KanitBold.L" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="KanitSemiBold.L" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_semibold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="KanitMedium.L" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_medium</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="KanitRegular.L" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="KanitBold.2X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="KanitSemiBold.2X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_semibold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="KanitMedium.2X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_medium</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="KanitRegular.2X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="KanitBold.M" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="KanitSemiBold.M" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_semibold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="KanitMedium.M" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="KanitRegular.M" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="KanitBold.S" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="KanitSemiBold.S" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="KanitMedium.S" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="KanitRegular.S" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="KanitBold.XII" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="KanitSemiBold.XII" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_semibold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="KanitMedium.XII" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="KanitRegular.XII" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="KanitBold.X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_bold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="KanitSemiBold.X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_semibold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="KanitMedium.X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_medium</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="KanitRegular.X" parent="TextAppearance.AppCompat.Body2">
+        <item name="fontFamily">@font/kanit_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlHighlight">@color/black</item>
+    </style>
+</resources>

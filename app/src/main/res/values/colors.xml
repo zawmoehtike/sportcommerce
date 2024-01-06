@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="black_alpha_6">#8F000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="color_white_grey">#E1E1E1</color>
+
+    <color name="color_pinview_grey">#919EAB</color>
+    <color name="color_text_grey">#919EAB</color>
+    <color name="color_orange">#E93D31</color>
+    <color name="color_new_orange">#FC6021</color>
+    <color name="color_whatsapp_green">#25D366</color>
+    <color name="color_cherry_white">#14FE4646</color>
+    <color name="color_orange_white">#FDEEEC</color>
+    <color name="color_text_blue">#007BFF</color>
+    <color name="color_green_white">#eaf9ee</color>
+    <color name="color_green">#24a24e</color>
+    <color name="color_yellow">#FFD200</color>
+    <color name="color_yellow_white">#FFFCE7</color>
+    <color name="color_text_grey_white">#F5F6F9</color>
+
+    <color name="color_grey_blue">#637381</color>
+    <color name="color_grey_blue_little">#919EAB</color>
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:label="Home"
+        tools:layout="@layout/fragment_home"
+        android:name="com.zawmoehtike.sportcommerce.presentation.features.home.HomeFragment">
+        <action
+            android:id="@+id/homeToProductDetails"
+            app:destination="@id/fragmentProductDetails">
+            <argument
+                android:name="productID"
+                app:argType="string"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentProductDetails"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_details"
+        android:name="com.zawmoehtike.sportcommerce.presentation.features.product_details.ProductDetailsFragment">
+    </fragment>
+
+</navigation>
