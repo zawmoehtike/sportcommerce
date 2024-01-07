@@ -21,7 +21,7 @@ class HomeNetworkDataSourceImpl @Inject constructor(
     }
 
     override suspend fun getProductDetails(id: String): ProductEntity {
-        val response = service.getProductDetails(id).getBodyOrThrowNetworkException()
+        val response = service.getProductDetails().getBodyOrThrowNetworkException()
         val product = productSourceMapper.map(response.data)
         return product
     }

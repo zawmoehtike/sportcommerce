@@ -31,7 +31,6 @@
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/margin_padding_8"
         android:paddingEnd="@dimen/margin_padding_8"
-        android:paddingTop="@dimen/margin_padding_16"
         android:weightSum="4"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +41,7 @@
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_padding_8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -75,6 +75,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutCart"
             android:layout_weight="1"
+            android:paddingTop="@dimen/margin_padding_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -110,6 +111,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSaved"
             android:layout_weight="1"
+            android:paddingTop="@dimen/margin_padding_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -145,6 +147,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutSearch"
             android:layout_weight="1"
+            android:paddingTop="@dimen/margin_padding_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"

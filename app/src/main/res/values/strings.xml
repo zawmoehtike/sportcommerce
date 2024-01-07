@@ -6,4 +6,5 @@
     <string name="error_socket_timeout">Connection timeout.</string>
     <string name="error_server_500">Server error occurs.Try again later.</string>
     <string name="error_server_404">Server not found.</string>
+    <string name="lorem_ipsm_blah_blah">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</string>
 </resources>

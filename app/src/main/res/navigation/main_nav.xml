@@ -12,11 +12,7 @@
         android:name="com.zawmoehtike.sportcommerce.presentation.features.home.HomeFragment">
         <action
             android:id="@+id/homeToProductDetails"
-            app:destination="@id/fragmentProductDetails">
-            <argument
-                android:name="productID"
-                app:argType="string"/>
-        </action>
+            app:destination="@id/fragmentProductDetails"/>
     </fragment>
 
     <fragment
@@ -24,6 +20,33 @@
         android:label="Product Details"
         tools:layout="@layout/fragment_product_details"
         android:name="com.zawmoehtike.sportcommerce.presentation.features.product_details.ProductDetailsFragment">
+        <argument
+            android:name="productID"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCart"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart"
+        android:name="com.zawmoehtike.sportcommerce.presentation.features.home.CartFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentSaved"
+        android:label="Saved"
+        tools:layout="@layout/fragment_saved"
+        android:name="com.zawmoehtike.sportcommerce.presentation.features.home.SavedFragment">
+        <action
+            android:id="@+id/savedToProductDetails"
+            app:destination="@id/fragmentProductDetails"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:label="Search"
+        tools:layout="@layout/fragment_search"
+        android:name="com.zawmoehtike.sportcommerce.presentation.features.home.SearchFragment">
     </fragment>
 
 </navigation>

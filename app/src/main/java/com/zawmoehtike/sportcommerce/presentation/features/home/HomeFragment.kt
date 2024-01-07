@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.zawmoehtike.sportcommerce.appbase.common.utils.EndReachedListener
 import com.zawmoehtike.sportcommerce.appbase.core.TraditionalPaginationParams
 import com.zawmoehtike.sportcommerce.appbase.core.viewstate.ListViewState
@@ -32,7 +33,8 @@ class HomeFragment: Fragment() {
     private val productRecyclerPagerAdapter by lazy {
         ProductRecyclerPagerAdapter(
             onClick = {
-
+                val direction = HomeFragmentDirections.homeToProductDetails(productID = "${it.id}")
+                findNavController().navigate(direction)
             }
         )
     }
