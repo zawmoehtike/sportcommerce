@@ -1,7 +1,6 @@
 package com.zawmoehtike.sportcommerce.presentation.features.product_details
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,11 +11,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.RecyclerView
 import com.zawmoehtike.sportcommerce.R
-import com.zawmoehtike.sportcommerce.appbase.common.utils.GlideUtils.loadCenterCropImageFromUrl
 import com.zawmoehtike.sportcommerce.appbase.core.viewstate.ViewState
 import com.zawmoehtike.sportcommerce.databinding.FragmentProductDetailsBinding
 import com.zawmoehtike.sportcommerce.domain.home.model.SizeModel
@@ -26,6 +22,7 @@ import com.zawmoehtike.sportcommerce.presentation.features.home.adapters.SizeRec
 import com.zawmoehtike.sportcommerce.presentation.features.product_details.adapters.ProductPhotoRecyclerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -87,7 +84,7 @@ class ProductDetailsFragment: Fragment() {
                 with(it.value) {
                     with(binding) {
                         tvCategory.text = "Men's Shoes"
-                        tvRating.text = "$rating"
+                        tvRating.text = "($rating)"
                         tvName.text = "$name"
                         tvPrice.text = "$currency $price"
                         tvMoreDescription.text = "$description"
@@ -95,7 +92,8 @@ class ProductDetailsFragment: Fragment() {
                         val snapHelper = LinearSnapHelper()
                         snapHelper.attachToRecyclerView(binding.rvProductPhotos)
                         binding.rvProductPhotos.adapter = productPhotoRecyclerAdapter
-                        productPhotoRecyclerAdapter.submitList(listOf(image, image, image))
+                        val productImageList = listOf(image, image, image)
+                        productPhotoRecyclerAdapter.submitList(productImageList)
                         lifecycleScope.launch(Dispatchers.Main) {
                             binding.recyclerViewIndicator.setRecyclerView(binding.rvProductPhotos)
                         }
@@ -106,6 +104,8 @@ class ProductDetailsFragment: Fragment() {
 
                         sizeRecyclerAdapter.submitList(usSizeList)
                         colorRecyclerAdapter.submitList(color)
+
+                        startProductPhotoAutoScroll(productImageList.size)
                     }
                 }
             } else if(it is ViewState.Loading) {
@@ -159,6 +159,28 @@ class ProductDetailsFragment: Fragment() {
             var qty = binding.tvCurrentQuantity.text.toString().toInt()
             if(qty > 1) qty--
             binding.tvCurrentQuantity.text = "$qty"
+        }
+
+        binding.ivBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
+
+    private fun startProductPhotoAutoScroll(size: Int) {
+        var currentPage = 0
+
+        lifecycleScope.launch {
+            while (true) {
+                launch(Dispatchers.Main) {
+                    binding.rvProductPhotos.smoothScrollToPosition(currentPage)
+                }
+
+                delay(2000)
+
+                currentPage++
+
+                if(currentPage == size) currentPage = 0
+            }
         }
     }
 }

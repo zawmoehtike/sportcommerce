@@ -20,6 +20,27 @@ class HomeViewModel @Inject constructor(
     private val exceptionToStringMapper: ExceptionToStringMapper
 ): BaseViewModel() {
 
+    fun loadSavedProductNewPage(currentPage: String, result: (ListViewState<List<ProductModel>>) -> Unit) {
+        viewModelScope.launch {
+            result.invoke(ListViewState.Loading())
+            runCatching {
+                val list = getProductList.execute(currentPage)
+
+                list.forEach { it.isFavourite = true }
+
+                if(list.isNotEmpty()) {
+                    result.invoke(ListViewState.Success(list))
+                } else {
+                    result.invoke(ListViewState.NoMoreContent())
+                }
+            }.getOrElse {
+                val errorMessage = exceptionToStringMapper.map(it)
+                Timber.d(errorMessage)
+                result.invoke(ListViewState.Error(errorMessage))
+            }
+        }
+    }
+
     fun loadProductNewPage(currentPage: String, result: (ListViewState<List<ProductModel>>) -> Unit) {
         viewModelScope.launch {
             result.invoke(ListViewState.Loading())

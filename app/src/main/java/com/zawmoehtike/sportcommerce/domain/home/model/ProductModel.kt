@@ -9,7 +9,9 @@ data class ProductModel(
     val name: String? = null,
     val price: String? = null,
     val rating: String? = null,
-    val size: SizeModel? = null
+    val size: SizeModel? = null,
+
+    var isFavourite: Boolean = false
 ) {
     data class ColorValue(
         val value: String?,

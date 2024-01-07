@@ -80,17 +80,27 @@ class HomeFragment: Fragment() {
                 productPaginationParam.currentPage++
 
                 productRecyclerPagerAdapter.appendItems(it.value)
+
+                productRecyclerPagerAdapter.setLoading(false)
             } else if(it is ListViewState.Loading) {
                 productPaginationParam.isLoading = true
+
+                productRecyclerPagerAdapter.setLoading(true)
             } else if(it is ListViewState.Error) {
                 productPaginationParam.isLoading = false
 
                 //Toast.makeText(context, it.errorMessage, Toast.LENGTH_SHORT).show()
+
+                productRecyclerPagerAdapter.setLoading(false)
             } else if(it is ListViewState.NoMoreContent) {
                 productPaginationParam.isLoading = false
                 productPaginationParam.isPageEnded = true
+
+                productRecyclerPagerAdapter.setLoading(false)
             } else {
                 productPaginationParam.isLoading = false
+
+                productRecyclerPagerAdapter.setLoading(false)
             }
         }
     }

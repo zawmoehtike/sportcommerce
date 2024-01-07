@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,16 +12,44 @@
         android:layout_height="?actionBarSize"
         app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:background="@drawable/bg_circle_grey_border"
+            android:clickable="true"
+            android:tint="@color/black"
+            android:src="@drawable/ic_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/margin_padding_12"
+            android:layout_marginStart="@dimen/margin_padding_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
             android:id="@+id/tvToolbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Product Details"
+            android:text=""
             style="@style/KanitSemiBold.M"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddToFavourite"
+            android:background="@drawable/bg_circle_grey_border"
+            android:clickable="true"
+            android:tint="@color/color_new_orange"
+            android:src="@drawable/ic_loved"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/margin_padding_8"
+            android:layout_marginEnd="@dimen/margin_padding_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -205,7 +234,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvMoreDescription"
-                android:visibility="gone"
+                android:visibility="visible"
                 tools:text="@string/lorem_ipsm_blah_blah"
                 style="@style/KanitRegular.S"
                 android:textColor="@color/color_text_grey"

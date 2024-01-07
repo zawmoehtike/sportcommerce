@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="60dp"
+    android:layout_height="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipToOutline="true"
+    android:background="@drawable/bg_colorless_border_card"
+    android:layout_margin="@dimen/margin_padding_8">
+
+    <View
+        android:id="@+id/view"
+        tools:background="@color/color_white_grey"
+        android:background="@color/color_white_grey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBrand"
+        android:tint="@color/black"
+        android:alpha="0.25"
+        android:src="@drawable/ic_addidas"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="@dimen/margin_padding_4"
+        android:layout_margin="@dimen/margin_padding_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

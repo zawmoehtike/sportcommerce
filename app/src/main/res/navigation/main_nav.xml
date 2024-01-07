@@ -12,7 +12,11 @@
         android:name="com.zawmoehtike.sportcommerce.presentation.features.home.HomeFragment">
         <action
             android:id="@+id/homeToProductDetails"
-            app:destination="@id/fragmentProductDetails"/>
+            app:destination="@id/fragmentProductDetails"
+            app:exitAnim="@anim/exit_horizontal_slide_out"
+            app:enterAnim="@anim/enter_horizontal_slide_in"
+            app:popExitAnim="@anim/pop_horizontal_slide_out"
+            app:popEnterAnim="@anim/pop_horizontal_slide_in"/>
     </fragment>
 
     <fragment
@@ -39,7 +43,17 @@
         android:name="com.zawmoehtike.sportcommerce.presentation.features.home.SavedFragment">
         <action
             android:id="@+id/savedToProductDetails"
-            app:destination="@id/fragmentProductDetails"/>
+            app:destination="@id/fragmentProductDetails"
+            app:exitAnim="@anim/exit_horizontal_slide_out"
+            app:enterAnim="@anim/enter_horizontal_slide_in"
+            app:popExitAnim="@anim/pop_horizontal_slide_out"
+            app:popEnterAnim="@anim/pop_horizontal_slide_in"/>
+        <action
+            android:id="@+id/savedToSearch"
+            app:destination="@id/fragmentSearch"/>
+        <action
+            android:id="@+id/savedToCart"
+            app:destination="@id/fragmentCart"/>
     </fragment>
 
     <fragment
